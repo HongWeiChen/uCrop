@@ -332,13 +332,13 @@ public class UCropActivity extends AppCompatActivity {
         findViewById(R.id.tv_cancel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (item.getItemId() == R.id.menu_crop) {
-//                    if (fragment != null && fragment.isAdded())
-//                        fragment.cropAndSaveImage();
-//                } else if (item.getItemId() == android.R.id.home) {
-//
-//                    removeFragmentFromScreen();
-//                }
+                onBackPressed();
+            }
+        });
+        findViewById(R.id.tv_crop).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cropAndSaveImage();
             }
         });
         findViewById(R.id.ll_refresh).setOnClickListener(new View.OnClickListener() {

@@ -34,7 +34,6 @@ public class UCropView extends FrameLayout {
         mGestureCropImageView.processStyledAttributes(a);
         a.recycle();
 
-
         setListenersToViews();
     }
 
