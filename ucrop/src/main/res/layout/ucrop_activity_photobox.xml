@@ -27,9 +27,7 @@
         android:id="@+id/ucrop_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="60dp"
-        android:layout_above="@+id/controls_wrapper"
-        android:layout_marginBottom="-12dp">
+        android:layout_above="@+id/controls_wrapper">
 
         <ImageView
             android:id="@+id/image_view_logo"
