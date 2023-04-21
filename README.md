@@ -93,7 +93,7 @@ Currently, you can change:
 
 # Changelog
 
-### Version: 2.3.0
+### Version: 2.3.1
 
 *   Merged pending pull requests with improvements and bugfixes
 *   Update compileSdk and targetSdk versions up to 31
