@@ -44,6 +44,7 @@ public class CropImageView extends TransformImageView {
     private final Matrix mTempMatrix = new Matrix();
 
     private float mTargetAspectRatio;
+    private float mAspectRatio;
     private float mMaxScaleMultiplier = DEFAULT_MAX_SCALE_MULTIPLIER;
 
     private CropBoundsChangeListener mCropBoundsChangeListener;
@@ -107,6 +108,10 @@ public class CropImageView extends TransformImageView {
      */
     public float getTargetAspectRatio() {
         return mTargetAspectRatio;
+    }
+
+    public float getAspectRatio() {
+        return mAspectRatio;
     }
 
     /**
@@ -378,6 +383,7 @@ public class CropImageView extends TransformImageView {
 
         if (mTargetAspectRatio == SOURCE_IMAGE_ASPECT_RATIO) {
             mTargetAspectRatio = drawableWidth / drawableHeight;
+            mAspectRatio = mTargetAspectRatio;
         }
 
         int height = (int) (mThisWidth / mTargetAspectRatio);

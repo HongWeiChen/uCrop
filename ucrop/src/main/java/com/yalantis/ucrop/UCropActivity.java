@@ -344,7 +344,8 @@ public class UCropActivity extends AppCompatActivity {
         findViewById(R.id.ll_refresh).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mGestureCropImageView.postRotate(-mGestureCropImageView.getCurrentAngle());
+                mOverlayView.setTargetAspectRatio(mGestureCropImageView.getAspectRatio());
+                resetRotation();
             }
         });
         findViewById(R.id.ll_rotation).setOnClickListener(new View.OnClickListener() {

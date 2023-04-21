@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.widget.FrameLayout;
 
 import com.yalantis.ucrop.R;
@@ -48,6 +49,11 @@ public class UCropView extends FrameLayout {
             @Override
             public void onCropRectUpdated(RectF cropRect) {
                 mGestureCropImageView.setCropRect(cropRect);
+            }
+
+            @Override
+            public void onTouchEvent(MotionEvent event) {
+                mGestureCropImageView.onTouchEvent(event);
             }
         });
     }
